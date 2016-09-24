@@ -17,5 +17,6 @@ namespace Forums.Controllers
         {
             return View(db.Topics.ToList());
         }
+
     }
 }

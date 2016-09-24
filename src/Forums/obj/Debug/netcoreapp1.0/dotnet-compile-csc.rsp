@@ -193,7 +193,7 @@
 -resource:"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\obj\Debug\netcoreapp1.0\Forumsdotnet-compile.deps.json",Forums.deps.json
 "c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Program.cs"
 "c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Startup.cs"
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Controllers\HomeClass.cs"
+"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Controllers\HomeController.cs"
 "c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\20160924024802_Initial.cs"
 "c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\20160924024802_Initial.Designer.cs"
 "c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\ForumsDbContextModelSnapshot.cs"

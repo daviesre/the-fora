@@ -1,0 +1,17 @@
+﻿@model IEnumerable<Forums.Models.Topic>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The Forae</title>
+</head>
+<body>
+    <h2>The Forae Home Page</h2>
+    <ul>
+        @foreach (var listTopic in Model)
+        {
+         <li>@Html.DisplayFor(modelTopic => listTopic.Name)</li>
+        }
+    </ul>
+  
+</body>
+</html>

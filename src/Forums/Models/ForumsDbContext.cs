@@ -21,5 +21,10 @@ namespace Forums.Models
         {
             base.OnModelCreating(builder);
         }
+
+        public ForumsDbContext()
+        {
+
+        }
     }
 }

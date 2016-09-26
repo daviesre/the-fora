@@ -1,4 +1,9 @@
-﻿@model Forums.Models.Topic
+﻿@{
+    ViewData["Title"] = "The Forae";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Forums.Models.Topic
 
 <html>
 <head>
@@ -12,7 +17,7 @@
     {
         @Html.LabelFor(model => model.Name)
         @Html.TextBoxFor(model => model.Name)
-        <input type="submit" value="Add new topic" />
+        <input class="btn btn-default" type="submit" value="Add new topic" />
     }
     <p>@Html.ActionLink("Back to list", "Index")</p>
 </body>

@@ -10,10 +10,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <body>
     <h2>The Forae Home Page</h2>
+    <hr />
     <ul>
         @foreach (var listTopic in Model)
         {
-         <li>@Html.DisplayFor(modelTopic => listTopic.Name) | @Html.ActionLink("Posts", "Posts", new { id = listTopic.Posts } )</li>
+         <li>@Html.DisplayFor(modelTopic => listTopic.Name) | @Html.ActionLink("Posts", "Posts", new { id = listTopic.TopicId } )</li>
         }
     </ul>
     <p>@Html.ActionLink("Create a topic", "Create")</p>

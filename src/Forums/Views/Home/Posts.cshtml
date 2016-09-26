@@ -1,4 +1,9 @@
-﻿@model Forums.Models.Post
+﻿@{
+    ViewData["Title"] = "The Forae";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Forums.Models.Post
 
 <html>
 <head>
@@ -8,6 +13,10 @@
     <h2>Posts on this topic</h2>
     <hr />
     @Html.DisplayNameFor(model => model.Title): @Html.DisplayFor(model => model.Title)
+    <br />
+    @Html.DisplayNameFor(model => model.Text): @Html.DisplayFor(model => model.Text)
+    <br />
+    @Html.DisplayNameFor(model => model.UserName): @Html.DisplayFor(model => model.UserName)
     <p>@Html.ActionLink("Back to list", "Index")</p>
 </body>
 </html>

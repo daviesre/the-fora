@@ -22,5 +22,18 @@ namespace Forums.Controllers
             var thisPost = db.Posts.FirstOrDefault(topics => topics.PostId == id);
             return View(thisPost);
         }
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Topic topic)
+        {
+            db.Topics.Add(topic);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -9,26 +9,28 @@ using Forums.Models;
 
 namespace Forums.Controllers
 {
-    public class HomeController : Controller
+    public class PostsController : Controller
     {
         // GET: /<controller>/
         private ForumsDbContext db = new ForumsDbContext();
-        public IActionResult Index()
+        public IActionResult Index (int id)
         {
-            return View(db.Topics.ToList());
+            IEnumerable<Post> model = db.Topics.FirstOrDefault(topics => topics.TopicId == id).Posts;
+            return View(model);
         }
-      
+
         public IActionResult Create()
         {
             return View();
         }
 
         [HttpPost]
-        public IActionResult Create(Topic topic)
+        public IActionResult Create(Post post)
         {
-            db.Topics.Add(topic);
+            db.Posts.Add(post);
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+
     }
 }

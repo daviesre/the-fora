@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "The Forae";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Forums.Models.Post>
+
+<html>
+<head>
+    <title>View Posts</title>
+</head>
+<body>
+    <h2>The Forae</h2>
+    <hr />
+    <p>@Html.ActionLink("Add new post", "Create")</p>
+    <p>@Html.ActionLink("Back to list", "Index", "Home")</p>
+</body>
+</html>

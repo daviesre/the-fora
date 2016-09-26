@@ -14,7 +14,7 @@
     <ul>
         @foreach (var listTopic in Model)
         {
-         <li>@Html.DisplayFor(modelTopic => listTopic.Name) | @Html.ActionLink("Posts", "Posts", new { id = listTopic.TopicId } )</li>
+         <li>@Html.DisplayFor(modelTopic => listTopic.Name) | @Html.ActionLink("Posts", "Index", "Posts", new { id = listTopic.TopicId } )</li>
         }
     </ul>
     <p>@Html.ActionLink("Create a topic", "Create")</p>

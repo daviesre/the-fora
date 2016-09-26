@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "The Forae";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model Forums.Models.Post
+
+<h2>Create Post</h2>
+<hr />
+<h4>Create a new post!</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Title)
+    @Html.TextBoxFor(model => model.Title)
+<input class="btn btn-default" type="submit" value="Add new post" />
+}
+<p>@Html.ActionLink("Back to list", "Index")</p>
+

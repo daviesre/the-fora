@@ -17,6 +17,10 @@ namespace Forums.Controllers
         {
             return View(db.Topics.ToList());
         }
-
+        public IActionResult Posts (int id)
+        {
+            var thisPost = db.Posts.FirstOrDefault(topics => topics.PostId == id);
+            return View(thisPost);
+        }
     }
 }

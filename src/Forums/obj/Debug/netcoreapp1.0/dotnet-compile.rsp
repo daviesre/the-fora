@@ -1,5 +1,5 @@
---temp-output:c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\obj\Debug\netcoreapp1.0\
---out:c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\bin\Debug\netcoreapp1.0\Forums.dll
+--temp-output:C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\obj\Debug\netcoreapp1.0\
+--out:C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\bin\Debug\netcoreapp1.0\Forums.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -195,14 +195,14 @@
 --reference:C:\Users\Russ\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\Russ\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\Russ\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\obj\Debug\netcoreapp1.0\Forumsdotnet-compile.deps.json",Forums.deps.json
-c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Program.cs
-c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Startup.cs
-c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Controllers\HomeController.cs
-c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\20160924024802_Initial.cs
-c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\20160924024802_Initial.Designer.cs
-c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\ForumsDbContextModelSnapshot.cs
-c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Comment.cs
-c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\ForumsDbContext.cs
-c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Post.cs
-c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Topic.cs
+--resource:"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\obj\Debug\netcoreapp1.0\Forumsdotnet-compile.deps.json",Forums.deps.json
+C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Program.cs
+C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Startup.cs
+C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Controllers\HomeController.cs
+C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\20160924024802_Initial.cs
+C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\20160924024802_Initial.Designer.cs
+C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\ForumsDbContextModelSnapshot.cs
+C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Comment.cs
+C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\ForumsDbContext.cs
+C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Post.cs
+C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Topic.cs

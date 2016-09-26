@@ -1,0 +1,13 @@
+﻿@model Forums.Models.Post
+
+<html>
+<head>
+    <title>View Posts</title>
+</head>
+<body>
+    <h2>Posts on this topic</h2>
+    <hr />
+    @Html.DisplayNameFor(model => model.Title): @Html.DisplayFor(model => model.Title)
+    <p>@Html.ActionLink("Back to list", "Index")</p>
+</body>
+</html>

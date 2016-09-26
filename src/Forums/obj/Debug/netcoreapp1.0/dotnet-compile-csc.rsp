@@ -7,8 +7,8 @@
 -debug:full
 -nostdlib
 -nologo
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
--out:"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\bin\Debug\netcoreapp1.0\Forums.dll"
+"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\obj\Debug\netcoreapp1.0\dotnet-compile.assemblyinfo.cs"
+-out:"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\bin\Debug\netcoreapp1.0\Forums.dll"
 -r:"C:\Users\Russ\.nuget\packages\Microsoft.AspNetCore.Antiforgery\1.0.1\lib\netstandard1.3\Microsoft.AspNetCore.Antiforgery.dll"
 -r:"C:\Users\Russ\.nuget\packages\Microsoft.AspNetCore.Authorization\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Authorization.dll"
 -r:"C:\Users\Russ\.nuget\packages\Microsoft.AspNetCore.Cors\1.0.0\lib\netstandard1.3\Microsoft.AspNetCore.Cors.dll"
@@ -191,14 +191,14 @@
 -r:"C:\Users\Russ\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll"
 -r:"C:\Users\Russ\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll"
 -r:"C:\Users\Russ\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll"
--resource:"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\obj\Debug\netcoreapp1.0\Forumsdotnet-compile.deps.json",Forums.deps.json
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Program.cs"
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Startup.cs"
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Controllers\HomeController.cs"
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\20160924024802_Initial.cs"
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\20160924024802_Initial.Designer.cs"
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\ForumsDbContextModelSnapshot.cs"
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Comment.cs"
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\ForumsDbContext.cs"
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Post.cs"
-"c:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Topic.cs"
+-resource:"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\obj\Debug\netcoreapp1.0\Forumsdotnet-compile.deps.json",Forums.deps.json
+"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Program.cs"
+"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Startup.cs"
+"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Controllers\HomeController.cs"
+"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\20160924024802_Initial.cs"
+"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\20160924024802_Initial.Designer.cs"
+"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Migrations\ForumsDbContextModelSnapshot.cs"
+"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Comment.cs"
+"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\ForumsDbContext.cs"
+"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Post.cs"
+"C:\Users\Russ\documents\visual studio 2015\Projects\Forums\src\Forums\Models\Topic.cs"

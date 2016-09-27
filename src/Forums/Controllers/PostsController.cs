@@ -14,9 +14,9 @@ namespace Forums.Controllers
     {
         // GET: /<controller>/
         private ForumsDbContext db = new ForumsDbContext();
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            return View(db.Posts.Include(posts => posts.Topic).ToList());
+            return View(db.Posts.Include(posts => posts.Topic).Where(topics => topics.TopicId == id).ToList());
         }
 
         public IActionResult Create()

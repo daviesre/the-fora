@@ -13,9 +13,9 @@ namespace Forums.Controllers
     public class CommentsController : Controller
     {
         private ForumsDbContext db = new ForumsDbContext();
-        public IActionResult Index()
+        public IActionResult Index(int id)
         {
-            return View(db.Comments.Include(comments => comments.Post).ToList());
+            return View(db.Comments.Include(comments => comments.Post).Where(posts => posts.PostId == id).ToList());
         }
     }
 }

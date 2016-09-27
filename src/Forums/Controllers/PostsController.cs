@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Forums.Models;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -13,10 +14,9 @@ namespace Forums.Controllers
     {
         // GET: /<controller>/
         private ForumsDbContext db = new ForumsDbContext();
-        public IActionResult Index (int id)
+        public IActionResult Index()
         {
-            IEnumerable<Post> model = db.Topics.FirstOrDefault(topics => topics.TopicId == id).Posts;
-            return View(model);
+            return View(db.Posts.Include(posts => posts.Topic).ToList());
         }
 
         public IActionResult Create()

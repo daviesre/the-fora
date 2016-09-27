@@ -5,20 +5,15 @@
 
 @model Forums.Models.Topic
 
-<html>
-<head>
-    <title>Forum - Create</title>
-</head>
-<body>
-    <h2>Create</h2>
-    <hr />
-    <h4>Create a new topic board!</h4>
-    @using (Html.BeginForm())
-    {
-        @Html.LabelFor(model => model.Name)
-        @Html.TextBoxFor(model => model.Name)
-        <input class="btn btn-default" type="submit" value="Add new topic" />
-    }
-    <p>@Html.ActionLink("Back to list", "Index")</p>
-</body>
-</html>
+
+<h2>Create</h2>
+<hr />
+<h4>Create a new topic board!</h4>
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(model => model.Name)
+    @Html.TextBoxFor(model => model.Name)
+<input class="btn btn-default" type="submit" value="Add new topic" />
+}
+<p>@Html.ActionLink("Back to list", "Index")</p>
+

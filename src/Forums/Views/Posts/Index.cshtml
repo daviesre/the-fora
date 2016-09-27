@@ -5,15 +5,13 @@
 
 @model IEnumerable<Forums.Models.Post>
 
-<html>
-<head>
-    <title>View Posts</title>
-</head>
-<body>
-    <h2>The Forae</h2>
-    <hr />
+<h2>View Posts</h2>
+<hr />
+@foreach (var listPost in Model)
+{
+    <li>@Html.DisplayFor(modelPost => listPost.Topic.Name)</li>
+    <li>@Html.DisplayFor(modelPost => listPost.Text) | @Html.ActionLink("Comments", "Index", "Comments", new { id = listPost.PostId })</li>
+}
 
-    <p>@Html.ActionLink("Add new post", "Create")</p>
-    <p>@Html.ActionLink("Back to list", "Index", "Home")</p>
-</body>
-</html>
+<p>@Html.ActionLink("Add new post", "Create")</p>
+<p>@Html.ActionLink("Back to Topics", "Index", "Home")</p>

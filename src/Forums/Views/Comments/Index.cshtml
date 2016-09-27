@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "The Forae";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<Forums.Models.Comment>
+
+<h2>Post a Comment</h2>
+
+@foreach (var listComment in Model)
+{   
+    <li>@Html.DisplayFor(modelComment => listComment.Post.Title)</li>
+    <li>@Html.DisplayFor(modelComment => listComment.Post.Text)</li>
+    <li>@Html.DisplayFor(modelComment => listComment.Text)</li>
+}
+
+<p>@Html.ActionLink("Back to Topics", "Index", "Home")</p>

@@ -13,12 +13,12 @@
                 <a class="navbar-brand" href="/">Home</a>
                 @if (User.Identity.IsAuthenticated)
                 {
-                 <p class="navbar-text navbar-right"><a href="/Account/Logout">Log Off</a></p>
+                 <p class="navbar-text navbar-right"><a href="/Account/Logout">Log Out</a></p>
                 }
                 else
                 {
-                      <p class="navbar-text navbar-right"><a href="/Account/Login">Log In</a></p>
-                    }
+                  <p class="navbar-text navbar-right"><a href="/Account/Login">Log In</a></p>
+                }
             </div>
         </div>
      </nav>

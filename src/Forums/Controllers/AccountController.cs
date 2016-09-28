@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Forums.Models;
 using Microsoft.AspNetCore.Identity;
 using Forums.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -23,6 +24,7 @@ namespace Forums.Controllers
             _signInManager = signInManager;
             _db = db;
         }
+
         public IActionResult Index()
         {
             return View();
@@ -40,7 +42,7 @@ namespace Forums.Controllers
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Account");
             }
             else
             {
@@ -59,7 +61,7 @@ namespace Forums.Controllers
             Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: true, lockoutOnFailure: false);
             if (result.Succeeded)
             {
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
             else
             {
@@ -76,7 +78,7 @@ namespace Forums.Controllers
         public async Task<IActionResult> LogOff()
         {
             await _signInManager.SignOutAsync();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
     }
 }

@@ -9,6 +9,11 @@
 
 
 <h2>The Forae Home Page</h2>
+
+@if (User.Identity.IsAuthenticated)
+{
+   <h5>Hello, @User.Identity.Name!</h5>
+}
 <hr />
 <ul>
     @foreach (var listTopic in Model)

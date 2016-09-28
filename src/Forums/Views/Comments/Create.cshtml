@@ -3,23 +3,20 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@model Forums.Models.Post
+@model Forums.Models.Comment
 
-<h2>New Post</h2>
+<h2>New Comment</h2>
 <hr />
-<h4>Create a post on any topic!</h4>
+
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Title)
-    @Html.TextBoxFor(model => model.Title)
     @Html.LabelFor(model => model.Text)
     @Html.TextBoxFor(model => model.Text)
     <label>User Name</label>
     @Html.TextBoxFor(model => model.UserName)
 
-    <label>Topic</label>
+    <label>Select a post to comment</label>
     @Html.DropDownList("TopicId")
-<input class="btn btn-default" type="submit" value="Create" />
+    <input class="btn btn-default" type="submit" value="Create" />
 }
 <p>@Html.ActionLink("Back to topics", "Index", "Home")</p>
-

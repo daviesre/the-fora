@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Forums.Models;
 using Microsoft.EntityFrameworkCore;
 using Forums.ViewModels;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -25,6 +26,7 @@ namespace Forums.Controllers
 
         public IActionResult Create()
         {
+            ViewBag.TopicId = new SelectList(db.Topics, "TopicId", "Name");
             return View();
         }
 
@@ -33,7 +35,7 @@ namespace Forums.Controllers
         {
             db.Posts.Add(post);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Create");
         }
 
     }

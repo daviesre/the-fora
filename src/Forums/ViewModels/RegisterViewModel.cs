@@ -15,7 +15,7 @@ namespace Forums.ViewModels
 
         [Required]
         [DataType(DataType.Password)]
-        [Display(Name = "Email")]
+        [Display(Name = "Password")]
         public string Password { get; set; }
 
         [DataType(DataType.Password)]

@@ -2,3 +2,23 @@
     ViewData["Title"] = "The Forae";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+
+@using System.Security.Claims
+<h2>Register with The Forae</h2>
+<p>Please register before continuing</p>
+<hr />
+@if (User.Identity.IsAuthenticated)
+{
+    <p>Welcome to the Forae, @User.Identity.Name!</p>
+    @using (Html.BeginForm("LogOff", "Account"))
+    {
+        <input type="submit" class="btn btn-default" value="Log out" />
+    }
+}
+else
+{
+    <p>@Html.ActionLink("Register", "Register")</p>
+    <p>@Html.ActionLink("Log in" , "Login")</p>
+}
+
+

@@ -203,6 +203,7 @@
 --resource:"C:\Users\epicodus\Desktop\reddit-clone\src\Forums\obj\Debug\netcoreapp1.0\Forumsdotnet-compile.deps.json",Forums.deps.json
 C:\Users\epicodus\Desktop\reddit-clone\src\Forums\Program.cs
 C:\Users\epicodus\Desktop\reddit-clone\src\Forums\Startup.cs
+C:\Users\epicodus\Desktop\reddit-clone\src\Forums\Controllers\AccountController.cs
 C:\Users\epicodus\Desktop\reddit-clone\src\Forums\Controllers\CommentsController.cs
 C:\Users\epicodus\Desktop\reddit-clone\src\Forums\Controllers\HomeController.cs
 C:\Users\epicodus\Desktop\reddit-clone\src\Forums\Controllers\PostsController.cs
@@ -217,4 +218,6 @@ C:\Users\epicodus\Desktop\reddit-clone\src\Forums\Models\ForumsDbContext.cs
 C:\Users\epicodus\Desktop\reddit-clone\src\Forums\Models\Post.cs
 C:\Users\epicodus\Desktop\reddit-clone\src\Forums\Models\Topic.cs
 C:\Users\epicodus\Desktop\reddit-clone\src\Forums\ViewModels\CommentsViewModel.cs
+C:\Users\epicodus\Desktop\reddit-clone\src\Forums\ViewModels\LoginViewModel.cs
 C:\Users\epicodus\Desktop\reddit-clone\src\Forums\ViewModels\PostsViewModel.cs
+C:\Users\epicodus\Desktop\reddit-clone\src\Forums\ViewModels\RegisterViewModel.cs

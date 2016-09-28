@@ -7,9 +7,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Forums.Models;
 using Forums.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Forums.Controllers
 {
+    [Authorize]
     public class CommentsController : Controller
     {
         private ForumsDbContext db = new ForumsDbContext();

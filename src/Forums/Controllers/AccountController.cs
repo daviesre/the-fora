@@ -67,6 +67,11 @@ namespace Forums.Controllers
             }
         }
 
+        public IActionResult Logout()
+        {
+            return View();
+        }
+
         [HttpPost]
         public async Task<IActionResult> LogOff()
         {

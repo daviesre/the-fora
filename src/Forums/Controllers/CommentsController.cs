@@ -17,5 +17,19 @@ namespace Forums.Controllers
         {
             return View(db.Comments.Include(comments => comments.Post).Where(posts => posts.PostId == id).ToList());
         }
+        public IActionResult Create()
+        {
+            ViewBag.PostId = new SelectList(db.Posts, "PostId", "Title");
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Comment comment)
+        {
+            db.Comments.Add(comment);
+            db.SaveChanges();
+            return RedirectToAction("Create");
+        }
+
     }
 }

@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Forums.Models;
-
+using Forums.ViewModels;
 
 namespace Forums.Controllers
 {
@@ -15,7 +15,10 @@ namespace Forums.Controllers
         private ForumsDbContext db = new ForumsDbContext();
         public IActionResult Index(int id)
         {
-            return View(db.Comments.Include(comments => comments.Post).Where(posts => posts.PostId == id).ToList());
+            var model = new CommentsViewModel();
+            model.post = db.Posts.FirstOrDefault(post => post.PostId == id);
+            model.Comments = db.Comments.Include(comments => comments.Post).Where(posts => posts.PostId == id).ToList();
+            return View(model);
         }
         public IActionResult Create()
         {

@@ -3,11 +3,13 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@model IEnumerable<Forums.Models.Comment>
+@model Forums.ViewModels.CommentsViewModel
 
-<h2>Post a Comment</h2>
+<h2>@Model.post.Title</h2>
+<h4>@Model.post.Text</h4>
+<h5>By: @Model.post.UserName</h5>
 
-@foreach (var listComment in Model)
+@foreach (var listComment in Model.Comments)
 {   
     <li>@Html.DisplayFor(modelComment => listComment.Text)</li>
 }

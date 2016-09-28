@@ -13,7 +13,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Forums.Controllers
 {
-    [Authorize]
+   
     public class PostsController : Controller
     {
         private ForumsDbContext db = new ForumsDbContext();
@@ -25,6 +25,7 @@ namespace Forums.Controllers
             return View(model);
         }
 
+        [Authorize]
         public IActionResult Create()
         {
             ViewBag.TopicId = new SelectList(db.Topics, "TopicId", "Name");

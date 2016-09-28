@@ -9,7 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 // For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Forums.Controllers
-{   [Authorize]
+{  
     public class HomeController : Controller
     {
         // GET: /<controller>/
@@ -18,7 +18,8 @@ namespace Forums.Controllers
         {
             return View(db.Topics.ToList());
         }
-      
+
+        [Authorize]
         public IActionResult Create()
         {
             return View();

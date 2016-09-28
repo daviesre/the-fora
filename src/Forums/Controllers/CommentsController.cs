@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Forums.Controllers
 {
-    [Authorize]
     public class CommentsController : Controller
     {
         private ForumsDbContext db = new ForumsDbContext();
@@ -22,6 +21,8 @@ namespace Forums.Controllers
             model.Comments = db.Comments.Include(comments => comments.Post).Where(posts => posts.PostId == id).ToList();
             return View(model);
         }
+
+        [Authorize]
         public IActionResult Create()
         {
             ViewBag.PostId = new SelectList(db.Posts, "PostId", "Title");

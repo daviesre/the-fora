@@ -3,13 +3,14 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@model IEnumerable<Forums.Models.Post>
+@model Forums.ViewModels.PostsViewModel
 
-<h2>View Posts</h2>
+<h2>@Model.topic.Name</h2>
 <hr />
-@foreach (var listPost in Model)
-{
-    <li>@Html.DisplayFor(modelPost => listPost.Topic.Name)</li>
+
+@foreach (var listPost in Model.Posts)
+{   
+    <li><strong>@Html.DisplayFor(modelPost => listPost.Title)</strong></li>
     <li>@Html.DisplayFor(modelPost => listPost.Text) | @Html.ActionLink("Comments", "Index", "Comments", new { id = listPost.PostId })</li>
 }
 

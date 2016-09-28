@@ -9,8 +9,6 @@
 
 @foreach (var listComment in Model)
 {   
-    <li>@Html.DisplayFor(modelComment => listComment.Post.Title)</li>
-    <li>@Html.DisplayFor(modelComment => listComment.Post.Text)</li>
     <li>@Html.DisplayFor(modelComment => listComment.Text)</li>
 }
 

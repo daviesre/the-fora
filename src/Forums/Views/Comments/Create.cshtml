@@ -16,7 +16,7 @@
     @Html.TextBoxFor(model => model.UserName)
 
     <label>Select a post to comment</label>
-    @Html.DropDownList("TopicId")
+    @Html.DropDownList("PostId")
     <input class="btn btn-default" type="submit" value="Create" />
 }
 <p>@Html.ActionLink("Back to topics", "Index", "Home")</p>

@@ -3,11 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Forums.Models
 {
-    public class ForumsDbContext : DbContext
+    public class ForumsDbContext : IdentityDbContext<ApplicationUser>
     {
+
+        //public ForumsDbContext(DbContextOptions options) : base(options)
+        //{
+
+        //}
+
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
@@ -15,6 +22,7 @@ namespace Forums.Models
         
             : base(options)
         { 
+
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)

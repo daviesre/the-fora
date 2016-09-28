@@ -8,9 +8,10 @@ using Forums.Models;
 namespace Forums.Migrations
 {
     [DbContext(typeof(ForumsDbContext))]
-    partial class ForumsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20160928183714_Authentication")]
+    partial class Authentication
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
                 .HasAnnotation("ProductVersion", "1.0.1")

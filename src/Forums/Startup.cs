@@ -11,6 +11,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Forums.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Forums
 {
@@ -31,15 +32,20 @@ namespace Forums
             services.AddEntityFramework()
                 .AddDbContext<ForumsDbContext>(options =>
                     options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ForumsDbContext>()
+                .AddDefaultTokenProviders();
         }
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseIdentity();
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
                   name: "default",
-                  template: "{controller=Home}/{action=Index}/{id?}");
+                  template: "{controller=Account}/{action=Index}/{id?}");
             });
 
             app.UseStaticFiles();

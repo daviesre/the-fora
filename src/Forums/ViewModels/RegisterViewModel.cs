@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace Forums.ViewModels
 {
     public class RegisterViewModel
-    {
+    {   
+        
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

@@ -1,3 +1,22 @@
-﻿body {
+﻿
+.center-block, .forum-block {
+    text-align:center;
+}
 
+.forum-block {
+  display: block;
+  text-decoration: none;
+  font-size: 1.3em;
+  line-height: 2.5;
+  border: 1px solid black;
+  margin-bottom:10px;
+}
+
+.forum-block:hover {
+  margin-left:7px;
+  background: rgb(219, 219, 219);
+}
+
+.user-name {
+    color:dodgerblue;
 }

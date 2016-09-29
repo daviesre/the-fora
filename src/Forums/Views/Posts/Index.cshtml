@@ -5,13 +5,12 @@
 
 @model Forums.ViewModels.PostsViewModel
 
-<h2>@Model.topic.Name</h2>
+<h2 class="center-block">@Model.topic.Name</h2>
 <hr />
 
 @foreach (var listPost in Model.Posts)
 {   
-    <li><strong>@Html.DisplayFor(modelPost => listPost.Title)</strong></li>
-    <li>@Html.DisplayFor(modelPost => listPost.Text) | @Html.ActionLink("Comments", "Index", "Comments", new { id = listPost.PostId })</li>
+    <li class="forum-block">@Html.DisplayFor(modelPost => listPost.Title) <br> @Html.DisplayFor(modelPost => listPost.Text) | @Html.ActionLink("Comments", "Index", "Comments", new { id = listPost.PostId })</li>
 }
 <hr />
 

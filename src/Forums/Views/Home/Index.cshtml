@@ -7,18 +7,21 @@
 
 @model IEnumerable<Forums.Models.Topic>
 
+<div class="center-block">
+    <h2>The Forae Home Page</h2>
 
-<h2>The Forae Home Page</h2>
+    @if (User.Identity.IsAuthenticated)
+    {
+        <h5>Hello, @User.Identity.Name!</h5>
+    }
+</div>
 
-@if (User.Identity.IsAuthenticated)
-{
-   <h5>Hello, @User.Identity.Name!</h5>
-}
 <hr />
 <ul>
     @foreach (var listTopic in Model)
     {
-        <li>@Html.DisplayFor(modelTopic => listTopic.Name) | @Html.ActionLink("Posts", "Index", "Posts", new { id = listTopic.TopicId } )</li>
+        <li class="forum-block container">@Html.DisplayFor(modelTopic => listTopic.Name) | @Html.ActionLink("Posts", "Index", "Posts", new { id = listTopic.TopicId } )</li>
     }
 </ul>
-<p>@Html.ActionLink("Create a topic", "Create")</p>
+
+<button class="btn btn-default">@Html.ActionLink("Create a topic", "Create")</button>

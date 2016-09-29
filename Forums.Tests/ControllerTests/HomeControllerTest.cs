@@ -9,7 +9,7 @@ using Xunit;
 
 namespace Forums.Tests.ControllerTests
 {
-    public class TopicsControllerTest
+    public class HomeControllerTest
     {
         [Fact]
         public void Get_ViewResult_Index_Test()

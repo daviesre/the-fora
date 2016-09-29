@@ -197,5 +197,6 @@
 --reference:C:\Users\epicodus\.nuget\packages\xunit.runner.utility\2.2.0-beta2-build3300\lib\netstandard1.1\xunit.runner.utility.dotnet.dll
 --reference:C:\Users\epicodus\Desktop\reddit-clone\src\Forums\bin\Debug\netcoreapp1.0\Forums.dll
 C:\Users\epicodus\Desktop\reddit-clone\Forums.Tests\Class1.cs
+C:\Users\epicodus\Desktop\reddit-clone\Forums.Tests\ControllerTests\TopicsControllerTest.cs
 C:\Users\epicodus\Desktop\reddit-clone\Forums.Tests\ModelTests\TopicTest.cs
 C:\Users\epicodus\Desktop\reddit-clone\Forums.Tests\Properties\AssemblyInfo.cs

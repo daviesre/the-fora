@@ -1,4 +1,5 @@
 ﻿using Forums.Controllers;
+using Forums.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -20,5 +21,18 @@ namespace Forums.Tests.ControllerTests
             //Assert
             Assert.IsType<ViewResult>(result);
       }
+
+        [Fact]
+        public void Get_ModelList_Index_Test()
+        {
+            //Arrange
+            ViewResult indexView = new HomeController().Index() as ViewResult;
+    
+            //Act
+            var result = indexView.ViewData.Model;
+
+            //Assert
+            Assert.IsType<List<Topic>>(result);
+        }
     }
 }

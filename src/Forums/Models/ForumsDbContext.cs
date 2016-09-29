@@ -9,7 +9,6 @@ namespace Forums.Models
 {
     public class ForumsDbContext : IdentityDbContext<ApplicationUser>
     {
-
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }

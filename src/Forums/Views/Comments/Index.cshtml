@@ -8,11 +8,10 @@
 <h2>@Model.post.Title</h2>
 <h4>@Model.post.Text</h4>
 <h5>By: @Model.post.UserName</h5>
-
+<hr />
 @foreach (var listComment in Model.Comments)
 {   
     <li>@Html.DisplayFor(modelComment => listComment.Text)</li>
 }
-
+<hr />
 <p>@Html.ActionLink("Add a new comment", "Create")</p>
-<p>@Html.ActionLink("Back to Topics", "Index", "Home")</p>

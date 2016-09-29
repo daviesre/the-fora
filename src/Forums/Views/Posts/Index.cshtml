@@ -13,7 +13,6 @@
     <li><strong>@Html.DisplayFor(modelPost => listPost.Title)</strong></li>
     <li>@Html.DisplayFor(modelPost => listPost.Text) | @Html.ActionLink("Comments", "Index", "Comments", new { id = listPost.PostId })</li>
 }
+<hr />
 
 <p>@Html.ActionLink("Add new post", "Create")</p>
-<p>@Html.ActionLink("Back to Topics", "Index", "Home")</p>
- 

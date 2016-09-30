@@ -7,14 +7,14 @@
 
 <div class="center-block">
     <h2>@Model.post.Title</h2>
-    <h4>@Model.post.Text</h4>
+    <h4>"@Model.post.Text"</h4>
     <h5 class="user-name">User: @Model.post.UserName</h5>
 </div>
 
 <hr />
 @foreach (var listComment in Model.Comments)
 {   
-    <li class="forum-block">@Html.DisplayFor(modelComment => listComment.Text) <br /> <span class="user-name">User: @Html.DisplayFor(modelComment => listComment.UserName)</span></li>
+    <li class="forum-block">"@Html.DisplayFor(modelComment => listComment.Text)" <br /> <span class="user-name">User: @Html.DisplayFor(modelComment => listComment.UserName)</span></li>
 }
 <hr />
 <p>@Html.ActionLink("Add a new comment", "Create")</p>

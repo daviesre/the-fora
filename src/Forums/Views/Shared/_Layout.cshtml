@@ -15,6 +15,7 @@
                 @if (User.Identity.IsAuthenticated)
                 {
                  <p class="navbar-text navbar-right"><a href="/Account/Logout">Log Out</a></p>
+                <p class="navbar-text navbar-right">@User.Identity.Name</p>
                 }
                 else
                 {

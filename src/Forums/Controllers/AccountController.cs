@@ -40,7 +40,8 @@ namespace Forums.Controllers
         {
             var user = new ApplicationUser { UserName = model.Email };
             IdentityResult result = await _userManager.CreateAsync(user, model.Password);
-            if (result.Succeeded)
+            Microsoft.AspNetCore.Identity.SignInResult result1 = await _signInManager.PasswordSignInAsync(model.Email, model.Password, isPersistent: true, lockoutOnFailure: false);
+                if (result.Succeeded)
             {
                 return RedirectToAction("Index", "Account");
             }

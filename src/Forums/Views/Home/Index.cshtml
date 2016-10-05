@@ -20,7 +20,7 @@
 <ul>
     @foreach (var listTopic in Model)
     {
-        <li class="forum-block container">@Html.DisplayFor(modelTopic => listTopic.Name) | @Html.ActionLink("Posts", "Index", "Posts", new { id = listTopic.TopicId } )</li>
+        <li class="forum-block container"><a href="@Url.Action("Index", "Posts", new { id = listTopic.TopicId })">@Html.DisplayFor(modelTopic => listTopic.Name)</a></li>
     }
 </ul>
 

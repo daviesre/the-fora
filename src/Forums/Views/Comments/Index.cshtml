@@ -1,21 +1,19 @@
 ﻿@{
-    ViewData["Title"] = "The Forae";
+    ViewData["Title"] = "Forae";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @model Forums.ViewModels.CommentsViewModel
 
-<div class="center-block">
-    <h2>@Model.post.Title</h2>
-    <h4>"@Model.post.Text"</h4>
-    <h5 class="user-name">User: @Model.post.UserName</h5>
+<h2>@Model.post.Title</h2>
+<h4 class="comment-block move-down">@Model.post.Text</h4> 
+<p class="user-name"> By: @Model.post.UserName</p>
 
-</div>
 
-<hr />
+
 @foreach (var listComment in Model.Comments)
 {   
-    <li class="forum-block">"@Html.DisplayFor(modelComment => listComment.Text)" <br /> <span class="user-name">User: @Html.DisplayFor(modelComment => listComment.UserName)</span></li>
+    <li>"@Html.DisplayFor(modelComment => listComment.Text)" <br /> By: @Html.DisplayFor(modelComment => listComment.UserName) </li>
 }
 <hr />
 <p>@Html.ActionLink("Add a new comment", "Create")</p>

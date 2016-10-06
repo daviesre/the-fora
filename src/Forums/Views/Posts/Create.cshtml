@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "The Forae";
+    ViewData["Title"] = "Forae - Create";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -16,17 +16,17 @@
     </div>
     @Html.LabelFor(model => model.Text, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10 move-down">
-        @Html.TextBoxFor(model => model.Text)
+        @Html.TextAreaFor(model => model.Text)
     </div>
     <div class="col-md-2">
-        <label>User Name</label>
+        <label>UserName</label>
     </div>
     <div class="col-md-10 move-down">
         @Html.TextBoxFor(model => model.UserName)
     </div>
 
     <div class="col-md-2">
-            <label>Forum</label>
+        <label>Choose Subforum</label>
     </div>
     <div class="col-md-10 move-down">
         @Html.DropDownList("TopicId")

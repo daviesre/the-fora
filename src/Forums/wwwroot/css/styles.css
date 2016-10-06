@@ -1,5 +1,5 @@
 ﻿
-.center-block, .forum-block {
+.center-block {
     text-align:center;
 }
 
@@ -8,7 +8,7 @@
   text-decoration: none;
   font-size: 1.3em;
   line-height: 2.5;
-  border: 1px solid black;
+  border: 1px solid gray;
   margin-bottom:10px;
 }
 
@@ -22,4 +22,18 @@
 
 .move-down {
     margin-bottom:10px;
+}
+
+.comment-block {
+  display: block;
+  text-decoration: none;
+  font-size: 1.3em;
+  line-height: 1.0;
+  border: 1px solid gray;
+  margin-bottom:10px;   
+  padding: 20px;
+}
+
+.comment-box {
+    padding: 100px;
 }

@@ -1,16 +1,15 @@
 ﻿@{
-    ViewData["Title"] = "The Forae";
+    ViewData["Title"] = "Forae";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 @model Forums.ViewModels.PostsViewModel
 
-<h2 class="center-block">@Model.topic.Name</h2>
-<hr />
+<h2 class="center-block">/  Forae/@Model.topic.Name</h2>
 
 @foreach (var listPost in Model.Posts)
 {
-    <li class="forum-block container"><a class="button" href="@Url.Action("Index", "Comments", new { id = listPost.PostId })">@Html.DisplayFor(modelTopic => listPost.Title)</a><br> @Html.DisplayFor(modelPost => listPost.Text)</li>
+    <li class="forum-block container"><a class="button" href="@Url.Action("Index", "Comments", new { id = listPost.PostId })">@Html.DisplayFor(modelTopic => listPost.Title)</a> <br /> By: @Html.DisplayFor(modelPost => listPost.UserName)</li>
 }
 <hr />
 

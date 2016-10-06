@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "The Forae";
+    ViewData["Title"] = "Forae";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -8,7 +8,7 @@
 @model IEnumerable<Forums.Models.Topic>
 
 <div class="center-block">
-    <h2>The Forae Home Page</h2>
+    <h2>Forae Home Page</h2>
 
     @if (User.Identity.IsAuthenticated)
     {
@@ -20,7 +20,7 @@
 <ul>
     @foreach (var listTopic in Model)
     {
-        <li class="forum-block container"><a href="@Url.Action("Index", "Posts", new { id = listTopic.TopicId })">@Html.DisplayFor(modelTopic => listTopic.Name)</a></li>
+        <li class="forum-block container"><a href="@Url.Action("Index", "Posts", new { id = listTopic.TopicId })">/Forae/@Html.DisplayFor(modelTopic => listTopic.Name)</a></li>
     }
 </ul>
 

@@ -11,14 +11,18 @@
 <hr />
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(m => m.Email)
-    @Html.TextBoxFor(m => m.Email)
-
-    @Html.LabelFor(m => m.Password)
+    @Html.LabelFor(m => m.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10 move-down">
+    @Html.TextBoxFor(m => m.Email )
+    </div>
+    @Html.LabelFor(m => m.Password, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
     @Html.PasswordFor(m => m.Password)
+    </div>
 
-    <input type="submit" value="Log in" class="btn btn-default" />
-}
+    <input type="submit" value="Log in" class="btn btn-default" FailureText="Login failed!" />
 
-<p><strong>Don't have an account?</strong></p>
-<p>@Html.ActionLink("Click here to sign up", "Register", "Account")</p>
+ }
+ <br />
+ <h4><strong>Don't have an account?</strong></h4>
+  @Html.ActionLink("Click here to sign up", "Register", "Account")

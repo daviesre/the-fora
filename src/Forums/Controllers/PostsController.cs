@@ -39,6 +39,5 @@ namespace Forums.Controllers
             db.SaveChanges();
             return RedirectToAction("Create");
         }
-
     }
 }

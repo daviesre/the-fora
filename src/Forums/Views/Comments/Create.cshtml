@@ -5,18 +5,26 @@
 
 @model Forums.Models.Comment
 
-<h2>New Comment</h2>
+<h2>Create a new Comment</h2>
 <hr />
 
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(model => model.Text)
-    @Html.TextBoxFor(model => model.Text)
-    <label>User Name</label>
+    
+    @Html.LabelFor(model => model.Text, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10 move-down">
+        @Html.TextBoxFor(model => model.Text)
+    </div>
+    <div class="col-md-2">
+        <label>User Name</label>
+    </div>
+    <div class="col-md-10 move-down">
     @Html.TextBoxFor(model => model.UserName)
+    </div>
 
-    <label>Select a post to comment</label>
+    <div class="col-md-2">
+        <label>Select a post</label>
+    </div>
     @Html.DropDownList("PostId")
     <input class="btn btn-default" type="submit" value="Create" />
 }
-<p>@Html.ActionLink("Back to topics", "Index", "Home")</p>

@@ -5,7 +5,7 @@
 
 @model Forums.Models.Comment
 
-<h2>Create a new Comment</h2>
+<h2>Create a new comment</h2>
 <hr />
 
 @using (Html.BeginForm())
@@ -26,5 +26,8 @@
         <label>Select a post</label>
     </div>
     @Html.DropDownList("PostId")
-    <input class="btn btn-default" type="submit" value="Create" />
+
+    <br />
+
+    <input class="btn btn-default" type="submit" value="Comment" />
 }

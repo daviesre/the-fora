@@ -6,7 +6,7 @@
 @model Forums.Models.Topic
 
 
-<h2>Create a new Subforum</h2>
+<h2>Create a new subforum</h2>
 <hr />
 
 @using (Html.BeginForm())
@@ -15,7 +15,10 @@
     <div class="col-md-10 move-down">
         @Html.TextBoxFor(model => model.Name)
     </div>
-<input class="btn btn-default" type="submit" value="Create Subforum" />
+
+    <br />
+
+    <input class="btn btn-default" type="submit" value="Create Subforum" />
 }
 
 

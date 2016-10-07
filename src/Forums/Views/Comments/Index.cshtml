@@ -5,15 +5,19 @@
 
 @model Forums.ViewModels.CommentsViewModel
 
-<h2>@Model.post.Title</h2>
-<h4 class="comment-block move-down">@Model.post.Text</h4> 
-<p class="user-name"> By: @Model.post.UserName</p>
+
+<h2><bold>@Model.post.Title</bold></h2>
+
+<div class="comment-block container">
+    <h4>@Model.post.Text</h4>
+    <p class="user-name"> By: @Model.post.UserName</p>
+</div>
 
 
 
 @foreach (var listComment in Model.Comments)
 {   
-    <li>"@Html.DisplayFor(modelComment => listComment.Text)" <br /> By: @Html.DisplayFor(modelComment => listComment.UserName) </li>
+    <li class="response-block container">@Html.DisplayFor(modelComment => listComment.Text) <br /> <span class="user-name">By: @Html.DisplayFor(modelComment => listComment.UserName)</span> </li>
 }
 <hr />
 <p>@Html.ActionLink("Add a new comment", "Create")</p>

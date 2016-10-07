@@ -17,7 +17,7 @@
 }
 
 .user-name {
-    color:dodgerblue;
+    color:steelblue;
 }
 
 .move-down {
@@ -28,12 +28,20 @@
   display: block;
   text-decoration: none;
   font-size: 1.3em;
-  line-height: 1.0;
+  line-height: 2.5;
   border: 1px solid gray;
-  margin-bottom:10px;   
-  padding: 20px;
+  margin-bottom:10px;
 }
 
-.comment-box {
-    padding: 100px;
+.response-block {
+  display: block;
+  text-decoration: none;
+  font-size: 1.3em;
+  line-height: 2.5;
+  border: 1px solid white;
+  margin-bottom:10px;
+}
+
+.btn {
+   margin-top: 30px;
 }

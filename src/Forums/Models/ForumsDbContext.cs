@@ -13,22 +13,18 @@ namespace Forums.Models
         public DbSet<Post> Posts { get; set; }
         public DbSet<Comment> Comments { get; set; }
         public ForumsDbContext(DbContextOptions<ForumsDbContext> options)
-        
             : base(options)
         { 
 
         }
-
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
             options.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=Forums;integrated security=True");
         }
-
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
         }
-
         public ForumsDbContext()
         {
 

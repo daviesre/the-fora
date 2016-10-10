@@ -11,6 +11,7 @@
 {
     <li class="forum-block container"><a class="button" href="@Url.Action("Index", "Comments", new { id = listPost.PostId })">@Html.DisplayFor(modelTopic => listPost.Title)</a> <br /> <span class="user-name">  By: @Html.DisplayFor(modelPost => listPost.UserName) </span></li>
 }
+
 <hr />
 
 <p>@Html.ActionLink("Add new post", "Create")</p>

@@ -13,5 +13,13 @@ namespace Forums.Models
         public string UserName { get; set; }
         public int PostId { get; set; }
         public virtual Post Post { get; set; }
+
+        public Comment(string text, string userName, int id = 0)
+        {
+            Text = text;
+            UserName = userName;
+            CommentId = id;
+        }
+        public Comment() { }
     }
 }

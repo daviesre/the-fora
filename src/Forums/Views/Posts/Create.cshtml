@@ -6,6 +6,7 @@
 @model Forums.Models.Post
 
 <h2>Create a new post</h2>
+
 <hr />
 
 @using (Html.BeginForm())
@@ -31,7 +32,6 @@
     <div class="col-md-10 move-down">
         @Html.DropDownList("TopicId")
     </div>
-
 
     <input class="btn btn-default" type="submit" value="Create Post" />
  }

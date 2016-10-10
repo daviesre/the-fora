@@ -3,8 +3,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@model Forums.ViewModels.CommentsViewModel
 
+@model Forums.ViewModels.CommentsViewModel
 
 <h2><bold>@Model.post.Title</bold></h2>
 
@@ -13,11 +13,45 @@
     <p class="user-name"> By: @Model.post.UserName</p>
 </div>
 
-
-
 @foreach (var listComment in Model.Comments)
 {   
     <li class="response-block container">@Html.DisplayFor(modelComment => listComment.Text) <br /> <span class="user-name">By: @Html.DisplayFor(modelComment => listComment.UserName)</span> </li>
 }
+
+<div id="result1" class="response-block container"></div>
+
 <hr />
-<p>@Html.ActionLink("Add a new comment", "Create")</p>
+
+<h2>Add a new comment</h2>
+
+<form class="new-comment">
+    <input type="hidden" name="Post" value="@Model.post" />
+    <input type="hidden" name="PostId" value="@Model.post.PostId" />
+    <input type="hidden" name="ApplicationUser" value="@User.Identity.Name" />
+    <label for="newText">Text: </label>
+    <input type="text" name="newText" />
+    <label for="newUser">UserName: </label>
+    <input type="text" name="newUser" />
+    <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        console.log("testing");
+        $('.new-comment').submit(function (event) {
+            event.preventDefault();
+            $.ajax ({
+                url: '@Url.Action("NewComment")',
+                type: 'POST',
+                dataType: 'json',
+                data: $(this).serialize(),
+                success: function (result) {
+                    var resultMessage = result.text + '<br /> <span class="user-name">By: ' + result.userName + '</span>';
+                    $('#result1').html(resultMessage);
+                }
+            });
+        });
+    }); 
+
+</script>
+

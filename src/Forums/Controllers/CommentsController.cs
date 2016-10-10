@@ -21,21 +21,18 @@ namespace Forums.Controllers
             model.Comments = db.Comments.Include(comments => comments.Post).Where(posts => posts.PostId == id).ToList();
             return View(model);
         }
-
-        [Authorize]
-        public IActionResult Create()
-        {
-            ViewBag.PostId = new SelectList(db.Posts, "PostId", "Title");
-            return View();
-        }
-
+        
         [HttpPost]
-        public IActionResult Create(Comment comment)
+        public IActionResult NewComment(string newText, string newUser,int PostId)
         {
-            db.Comments.Add(comment);
-            db.SaveChanges();
-            return RedirectToAction("Create");
-        }
+            Post foundProduct=db.Posts.FirstOrDefault(model => model.PostId == PostId);
+            Comment newComment = new Comment(newText, newUser);
+            newComment.Post = foundProduct;
+            newComment.PostId = PostId;
 
+            db.Comments.Add(newComment);
+            db.SaveChanges();
+            return Json(newComment);
+        }
     }
 }

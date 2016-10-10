@@ -12,24 +12,11 @@
   margin-bottom:10px;
 }
 
-.forum-block:hover {
-  background: rgb(219, 219, 219);
-}
-
 .user-name {
-    color:steelblue;
+  color:steelblue;
 }
 
 .move-down {
-    margin-bottom:10px;
-}
-
-.comment-block {
-  display: block;
-  text-decoration: none;
-  font-size: 1.3em;
-  line-height: 2.5;
-  border: 1px solid gray;
   margin-bottom:10px;
 }
 

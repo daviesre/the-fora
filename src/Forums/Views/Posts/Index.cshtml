@@ -9,7 +9,7 @@
 
 @foreach (var listPost in Model.Posts)
 {
-    <li class="forum-block container"><a class="button" href="@Url.Action("Index", "Comments", new { id = listPost.PostId })">@Html.DisplayFor(modelTopic => listPost.Title)</a> <br /> <span class="user-name">  By: @Html.DisplayFor(modelPost => listPost.UserName) </span></li>
+    <li class="forum-block container"><a class="button" href="@Url.Action("Index", "Comments", new { id = listPost.PostId })">@Html.DisplayFor(modelTopic => listPost.Title)</a> <br /> <strong> By: @Html.DisplayFor(modelPost => listPost.UserName) </strong></li>
 }
 
 <hr />

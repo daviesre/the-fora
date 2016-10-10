@@ -10,12 +10,12 @@
 
 <div class="forum-block container">
     <h4>@Model.post.Text</h4>
-    <p class="user-name"> By: @Model.post.UserName</p>
+    <p><strong>By: @Model.post.UserName</strong></p>
 </div>
 
 @foreach (var listComment in Model.Comments)
 {   
-    <li class="response-block container">@Html.DisplayFor(modelComment => listComment.Text) <br /> <span class="user-name">By: @Html.DisplayFor(modelComment => listComment.UserName)</span> </li>
+    <li class="response-block container">@Html.DisplayFor(modelComment => listComment.Text) <br /> <p class="user-name">By: @Html.DisplayFor(modelComment => listComment.UserName)</p> </li>
 }
 
 <div id="result1" class="response-block container"></div>

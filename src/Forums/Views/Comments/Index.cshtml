@@ -3,7 +3,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
 @model Forums.ViewModels.CommentsViewModel
 
 <h2><bold>@Model.post.Title</bold></h2>
@@ -29,6 +28,7 @@
 <form class="new-comment">
     <input type="hidden" name="Post" value="@Model.post" />
     <input type="hidden" name="PostId" value="@Model.post.PostId" />
+    <input type="hidden" name="UserId" value= "@User.Identity.Name" />
     <div class="col-md-2">
         <label for="newText">Text: </label>
     </div>

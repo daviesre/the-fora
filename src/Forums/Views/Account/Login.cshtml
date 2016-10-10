@@ -8,6 +8,7 @@
 @model LoginViewModel
 
 <h3>Please log in to your account to add content</h3>
+
 <hr />
 @using (Html.BeginForm())
 {
@@ -20,9 +21,10 @@
     @Html.PasswordFor(m => m.Password)
     </div>
 
-    <input type="submit" value="Log in" class="btn btn-default" FailureText="Login failed!" />
-
+    <input type="submit" value="Log in" class="btn btn-default" />
  }
+
  <br />
+
  <h4><strong>Don't have an account?</strong></h4>
   @Html.ActionLink("Click here to sign up", "Register", "Account")

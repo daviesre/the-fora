@@ -9,12 +9,16 @@
 {
     @using (Html.BeginForm("LogOff", "Account"))
     {
-        <h1>Are you sure you want to log out?</h1>
-        <input type="submit" class="btn btn-default" value="Log out" />
+        <h1 class="center-block">Are you sure you want to log out?</h1>
+        <div class="col-md-12 center-block container">
+            <input type="submit" class="btn btn-default logoff-btn" value="Log Out" />
+        </div>
     }
+
     @using (Html.BeginForm("Index","Home"))
-    {
-        <input type="submit" class="btn btn-default" value="Cancel" />
+    {   <div class="col-md-12 center-block container">
+            <input type="submit" class="btn btn-default logoff-btn" value="Cancel" />
+        </div>
     }
 }
    

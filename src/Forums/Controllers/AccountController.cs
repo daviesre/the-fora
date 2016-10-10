@@ -8,8 +8,6 @@ using Microsoft.AspNetCore.Identity;
 using Forums.ViewModels;
 using Microsoft.AspNetCore.Authorization;
 
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace Forums.Controllers
 {
     public class AccountController : Controller

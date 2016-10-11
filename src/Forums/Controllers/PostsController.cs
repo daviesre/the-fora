@@ -9,11 +9,9 @@ using Forums.ViewModels;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.AspNetCore.Authorization;
 
-// For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
-
 namespace Forums.Controllers
 {
-   
+
     public class PostsController : Controller
     {
         private ForumsDbContext db = new ForumsDbContext();
@@ -35,13 +33,9 @@ namespace Forums.Controllers
         [HttpPost]
         public IActionResult Create(Post post)
         {
-            if(ModelState.IsValid)
-            {
-                db.Posts.Add(post);
-                db.SaveChanges();
-                return RedirectToAction("");
-            }
-            return View();
+            db.Posts.Add(post);
+            db.SaveChanges();
+            return RedirectToAction("Create");
         }
     }
 }

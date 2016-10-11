@@ -19,6 +19,7 @@
 
 <div id="result1" class="response-block container"></div>
 
+
 <hr />
 
 <h2>Add a new comment</h2>
@@ -28,7 +29,6 @@
 <form class="new-comment">
     <input type="hidden" name="Post" value="@Model.post" />
     <input type="hidden" name="PostId" value="@Model.post.PostId" />
-    <input type="hidden" name="UserId" value= "@User.Identity.Name" />
     <div class="col-md-2">
         <label for="newText">Text: </label>
     </div>

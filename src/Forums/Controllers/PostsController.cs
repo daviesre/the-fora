@@ -35,9 +35,13 @@ namespace Forums.Controllers
         [HttpPost]
         public IActionResult Create(Post post)
         {
-            db.Posts.Add(post);
-            db.SaveChanges();
-            return RedirectToAction("Create");
+            if(ModelState.IsValid)
+            {
+                db.Posts.Add(post);
+                db.SaveChanges();
+                return RedirectToAction("");
+            }
+            return View();
         }
     }
 }

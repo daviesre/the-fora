@@ -10,12 +10,12 @@
 <hr />
 
 @using (Html.BeginForm())
-{
+{  
     @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10 move-down">
         @Html.TextBoxFor(model => model.Name)
     </div>
-
+    @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
     <br />
 
     <input class="btn btn-default" type="submit" value="Create Subforum" />

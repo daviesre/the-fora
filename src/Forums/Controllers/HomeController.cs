@@ -28,9 +28,13 @@ namespace Forums.Controllers
         [HttpPost]
         public IActionResult Create(Topic topic)
         {
-            db.Topics.Add(topic);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            if(ModelState.IsValid)
+            {
+                db.Topics.Add(topic);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            return View(topic);
         }
     }
 }

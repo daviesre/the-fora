@@ -10,6 +10,7 @@ namespace Forums.Models
     {
         [Key]
         public int TopicId { get; set; }
+        [Required(ErrorMessage = "Please enter a topic name.")]
         public string Name { get; set; }
         public virtual ICollection<Post> Posts { get; set; }
     }

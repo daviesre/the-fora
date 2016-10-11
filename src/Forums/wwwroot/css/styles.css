@@ -3,30 +3,24 @@
     text-align:center;
 }
 
-.forum-block {
+.forum-block, .response-block {
   display: block;
   text-decoration: none;
   font-size: 1.3em;
   line-height: 2.5;
   border: 1px solid gray;
-  margin-bottom:10px;
 }
 
 .user-name {
   color:darkgray;
 }
 
-.move-down {
+.move-down, .response-block, .forum-block {
   margin-bottom:10px;
 }
 
 .response-block {
-  display: block;
-  text-decoration: none;
-  font-size: 1.3em;
-  line-height: 2.5;
   border: 1px solid white;
-  margin-bottom:10px;
   margin-left:20px;
 }
 
@@ -36,4 +30,8 @@
 
 .logoff-btn {
     padding: 20px;
+}
+
+#move-down-comment {
+    margin-top: 300px;
 }

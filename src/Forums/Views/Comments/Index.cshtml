@@ -5,12 +5,15 @@
 
 @model Forums.ViewModels.CommentsViewModel
 
-<h2><bold>@Model.post.Title</bold></h2>
+<h2>@Model.post.Title</h2>
+
+<br />
 
 <div class="forum-block container">
     <h4>@Model.post.Text</h4>
     <p><strong>By: @Model.post.UserName</strong></p>
 </div>
+
 
 @foreach (var listComment in Model.Comments)
 {   
@@ -19,47 +22,49 @@
 
 <div id="result1" class="response-block container"></div>
 
+<div id="move-down-comment">
 
-<hr />
+    <hr />
 
-<h2>Add a new comment</h2>
+    <h3>Add a new comment</h3>
 
-<br />
+    <br />
 
-<form class="new-comment">
-    <input type="hidden" name="Post" value="@Model.post" />
-    <input type="hidden" name="PostId" value="@Model.post.PostId" />
-    <div class="col-md-2">
-        <label for="newText">Text: </label>
-    </div>
-    <div class="col-md-10 move-down">
-        <input type="text" name="newText" />
-    </div>
-    <div class="col-md-2">
-        <label for="newUser">UserName: </label>
-    </div>
-    <div class="col-md-10 move-down">
-        <input type="text" name="newUser" />
-    </div>
-    <button type="submit" class="btn btn-default">Submit</button>
-</form>
+    <form class="new-comment">
+        <input type="hidden" name="Post" value="@Model.post" />
+        <input type="hidden" name="PostId" value="@Model.post.PostId" />
+        <div class="col-md-2">
+            <label for="newText">Text: </label>
+        </div>
+        <div class="col-md-10 move-down">
+            <input type="text" name="newText" />
+        </div>
+        <div class="col-md-2">
+            <label for="newUser">UserName: </label>
+        </div>
+        <div class="col-md-10 move-down">
+            <input type="text" name="newUser" />
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+    </form>
 
-<script type="text/javascript">
-    $(document).ready(function () {
-        $('.new-comment').submit(function (event) {
-            event.preventDefault();
-            $.ajax ({
-                url: '@Url.Action("NewComment")',
-                type: 'POST',
-                dataType: 'json',
-                data: $(this).serialize(),
-                success: function (result) {
-                    var resultMessage = result.text + '<br /> <span class="user-name">By: ' + result.userName + '</span>';
-                    $('#result1').html(resultMessage);
-                }
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.new-comment').submit(function (event) {
+                event.preventDefault();
+                $.ajax({
+                    url: '@Url.Action("NewComment")',
+                    type: 'POST',
+                    dataType: 'json',
+                    data: $(this).serialize(),
+                    success: function (result) {
+                        var resultMessage = result.text + '<br /> <span class="user-name">By: ' + result.userName + '</span>';
+                        $('#result1').html(resultMessage);
+                    }
+                });
             });
         });
-    }); 
+    </script>
 
-</script>
+</div>
 

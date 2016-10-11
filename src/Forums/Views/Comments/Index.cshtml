@@ -33,17 +33,12 @@
     <form class="new-comment">
         <input type="hidden" name="Post" value="@Model.post" />
         <input type="hidden" name="PostId" value="@Model.post.PostId" />
+        <input type="hidden" name="newUser" value="@User.Identity.Name" />
         <div class="col-md-2">
             <label for="newText">Text: </label>
         </div>
         <div class="col-md-10 move-down">
             <input type="text" name="newText" />
-        </div>
-        <div class="col-md-2">
-            <label for="newUser">UserName: </label>
-        </div>
-        <div class="col-md-10 move-down">
-            <input type="text" name="newUser" />
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
     </form>

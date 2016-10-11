@@ -10,7 +10,9 @@
 <hr />
 
 @using (Html.BeginForm())
-{   
+{
+    <input type="hidden" name="UserName" value="@User.Identity.Name" />
+
     @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10 move-down">
         @Html.TextBoxFor(model => model.Title)
@@ -18,12 +20,6 @@
     @Html.LabelFor(model => model.Text, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10 move-down">
         @Html.TextAreaFor(model => model.Text)
-    </div>
-    <div class="col-md-2">
-        <label>UserName</label>
-    </div>
-    <div class="col-md-10 move-down">
-        @Html.TextBoxFor(model => model.UserName)
     </div>
 
     <div class="col-md-2">

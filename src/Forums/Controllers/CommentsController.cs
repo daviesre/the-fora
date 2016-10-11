@@ -22,6 +22,7 @@ namespace Forums.Controllers
             return View(model);
         }
         
+        [Authorize]
         [HttpPost]
         public IActionResult NewComment(string newText, string newUser,int PostId)
         {

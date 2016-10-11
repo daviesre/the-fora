@@ -9,7 +9,7 @@
   font-size: 1.3em;
   line-height: 2.5;
   border: 1px solid gray;
-  max-width:850px;
+  max-width:950px;
 }
 
 .user-name {
@@ -22,7 +22,7 @@
 
 .response-block {
   border: 1px solid white;
-  max-width:700px;
+  max-width:900px;
 }
 
 .btn {
@@ -30,10 +30,14 @@
 }
 
 .logoff-btn {
-    padding: 20px;
+   padding: 20px;
 }
 
 #move-down-comment {
-    margin-top: 300px;
+   margin-top: 300px;
+}
+
+#title-block {
+    margin-left:95px;
 }
 

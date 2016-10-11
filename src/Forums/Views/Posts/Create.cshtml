@@ -15,12 +15,12 @@
 
     @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10 move-down">
-        @Html.TextBoxFor(model => model.Title)
+        @Html.TextBoxFor(model => model.Title, new { required = "required" })
     </div>
 
     @Html.LabelFor(model => model.Text, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10 move-down">
-        @Html.TextAreaFor(model => model.Text)
+        @Html.TextAreaFor(model => model.Text, new { required = "required" })
     </div>
 
     <div class="col-md-2">

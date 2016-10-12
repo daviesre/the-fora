@@ -12,10 +12,11 @@
 <hr />
 @using (Html.BeginForm())
 {
-    @Html.LabelFor(m => m.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+    @Html.LabelFor(m => m.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10 move-down">
-    @Html.TextBoxFor(m => m.Email )
+        @Html.TextBoxFor(m => m.UserName)
     </div>
+
     @Html.LabelFor(m => m.Password, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10">
     @Html.PasswordFor(m => m.Password)

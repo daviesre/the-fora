@@ -11,6 +11,11 @@
 <hr />
 @using (Html.BeginForm("Register", "Account", FormMethod.Post))
 {
+    @Html.LabelFor(m => m.UserName, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10 move-down">
+        @Html.TextBoxFor(m => m.UserName)
+    </div>
+
     @Html.LabelFor(m => m.Email, htmlAttributes: new { @class = "control-label col-md-2" })
     <div class="col-md-10 move-down">
         @Html.TextBoxFor(m => m.Email)

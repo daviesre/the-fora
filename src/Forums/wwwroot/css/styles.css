@@ -63,4 +63,10 @@
     .mobile-register {
         text-align:center;
     }
+    #mobile-comment {
+        text-align:inherit;
+    }
+    #mobile-user {
+        visibility:hidden;
+    }
 }

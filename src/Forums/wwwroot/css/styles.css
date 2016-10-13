@@ -33,7 +33,7 @@
    padding: 20px;
 }
 
-#move-down-comment {
+#add-comment-down {
    margin-top: 300px;
 }
 
@@ -41,3 +41,26 @@
     margin-left:95px;
 }
 
+@media(max-width:767px){
+    #title-block {
+        margin-left:0px;
+    }
+    #add-comment-down {
+        margin-top:0px;
+    }
+    .forum-block {
+      line-height: 1.9;
+      border: 1px solid lightgray;
+      text-align:center;
+    }
+    .response-block {
+       margin-left:30px;
+       line-height: 1.9;
+    }
+    .mobile-scale {
+        margin-right:45px;
+    }
+    .mobile-register {
+        text-align:center;
+    }
+}

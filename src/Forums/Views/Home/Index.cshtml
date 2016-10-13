@@ -21,7 +21,7 @@
 <ul>
     @foreach (var listTopic in Model)
     {
-        <li class="forum-block container"><a href="@Url.Action("Index", "Posts", new { id = listTopic.TopicId })">/Forae/@Html.DisplayFor(modelTopic => listTopic.Name)</a></li>
+        <li class="forum-block container mobile-scale"><a href="@Url.Action("Index", "Posts", new { id = listTopic.TopicId })">/Forae/@Html.DisplayFor(modelTopic => listTopic.Name)</a></li>
     }
 </ul>
 

@@ -8,18 +8,13 @@
 @model IEnumerable<Forums.Models.Topic>
 
 <div class="center-block image">
-    <img src="https://source.unsplash.com/random/1150x400">
-    <h2 class="alter-image">The Forae <br /> <span class="alter-font">a forum about anything</span></h2>
-
-    @if (User.Identity.IsAuthenticated)
-    {
-        <h5>Hello, @User.Identity.Name!</h5>
-    }
+    <img src="https://source.unsplash.com/random/1200x400">
+    <h1 class="alter-image">The Forae <br /> <span class="alter-font">a forum about anything</span></h1>
 </div>
 
 <br />
 
-<ul>
+<ul class="center-block">
     @foreach (var listTopic in Model)
     {
         <li class="forum-block container mobile-scale"><a href="@Url.Action("Index", "Posts", new { id = listTopic.TopicId })">/Forae/@Html.DisplayFor(modelTopic => listTopic.Name)</a></li>

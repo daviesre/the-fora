@@ -1,5 +1,4 @@
-﻿
-.center-block {
+﻿.center-block {
     text-align:center;
 }
 
@@ -8,8 +7,8 @@
   text-decoration: none;
   font-size: 1.3em;
   line-height: 2.5;
-  border: 1px solid gray;
-  max-width:950px;
+  font:white;
+  font-family:"Josefin Slab", serif;
 }
 
 .user-name {
@@ -20,9 +19,12 @@
   margin-bottom:10px;
 }
 
+#comment-move-down {
+    margin-bottom: 50px;
+}
 .response-block {
   border: 1px solid white;
-  max-width:900px;
+  max-width:1100px;
 }
 
 .btn {
@@ -37,36 +39,34 @@
    margin-top: 300px;
 }
 
-#title-block {
-    margin-left:95px;
-}
-
 .image {
     position: relative;
+    opacity:0.8;
 }
 
 .alter-image {
+    font-family: 'Amatic SC', cursive;
+    font-size: 100px;
     position: absolute;
-    top: 200px;
-    font-family: 'Josefin Slab', serif;
-    left: 0;
+    top: 100px;
+    left: 50px;
     width: 100%;
     text-align:center;
     color:white;
-    opacity:0.65;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    opacity:0.7;
+    text-shadow: -1px 0 gray, 0 1px gray, 1px 0 gray, 0 -1px gray;
 }
 
 .alter-font {
-    font-size:20px;
+    font-size:30px;
 }
 
 @media(max-width:767px){
     #title-block {
-        margin-left:0px;
+      margin-left:0px;
     }
     #add-comment-down {
-        margin-top:0px;
+      margin-top:0px;
     }
     .forum-block {
       line-height: 1.9;

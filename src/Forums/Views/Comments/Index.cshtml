@@ -23,9 +23,9 @@
 
 @if (User.Identity.IsAuthenticated)
 {
-    <div id="add-comment-down" class="center-block">
+    <div id="add-comment-down" class="center-block response-block">
 
-     <p class="response-block">add new comment</p>
+     <p>add new comment</p>
 
     <form class="new-comment">
         <input type="hidden" name="Post" value="@Model.post" />

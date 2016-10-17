@@ -6,16 +6,16 @@
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://bootswatch.com/yeti/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="https://bootswatch.com/lumen/bootstrap.min.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="~/css/styles.css" />
-    <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise|Josefin+Slab|Amatic+SC" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Amatic+SC" rel="stylesheet">
     <meta name="csrf-token" content="<?= csrf_token() ?>">
 </head>
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Forae</a>
+                <a class="navbar-brand" href="/">Fora</a>
                 @if (User.Identity.IsAuthenticated)
                 {
                  <p class="navbar-text navbar-right"><a href="/Account/Logout">Log Out</a></p>

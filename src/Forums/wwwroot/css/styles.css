@@ -27,6 +27,10 @@
     font-family:Calibri;
 }
 
+.btn {
+   margin-bottom: 30px;
+}
+
 .logoff-btn {
    padding: 20px;
 }

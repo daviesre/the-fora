@@ -7,7 +7,7 @@
 
 
 
-<div class="forum-block container comment-title" id="mobile-comment">
+<div class="forum-block container comment-title center-block" id="mobile-comment">
     <h3 class="title-move-down">@Model.post.Title</h3>
     <h5>@Model.post.Text</h5>
     <h5 class="user-name">by @Model.post.UserName</h5>
@@ -16,18 +16,16 @@
 
 @foreach (var listComment in Model.Comments)
 {   
-    <li class="response-block container response-font">@Html.DisplayFor(modelComment => listComment.Text) <br /> <p class="user-name">by @Html.DisplayFor(modelComment => listComment.UserName)</p> </li>
+    <li class="response-block container response-font reply-block">@Html.DisplayFor(modelComment => listComment.Text) <span class="user-name"> <br /> by @Html.DisplayFor(modelComment => listComment.UserName)</span> </li>
 }
 
 <div id="result1" class="response-block container"></div>
 
 @if (User.Identity.IsAuthenticated)
 {
-    <div id="add-comment-down">
+    <div id="add-comment-down" class="center-block">
 
-     <hr />
-
-     <p>add a new comment</p>
+     <p class="response-block">add new comment</p>
 
      <br />
 
@@ -35,10 +33,7 @@
         <input type="hidden" name="Post" value="@Model.post" />
         <input type="hidden" name="PostId" value="@Model.post.PostId" />
         <input type="hidden" name="newUser" value="@User.Identity.Name" />
-        <div class="col-md-1">
-            <label for="newText">Text: </label>
-        </div>
-        <div class="col-md-11 move-down">
+        <div class="move-down">
             <textarea type="text" name="newText" required></textarea>
         </div>
         <button type="submit" class="btn btn-default move-down">Submit</button>
@@ -54,7 +49,7 @@
                     dataType: 'json',
                     data: $(this).serialize(),
                     success: function (result) {
-                        var resultMessage = '<span class="response-font">' + result.text + '<br /> <span class="user-name">by ' + result.userName + '</span></span>';
+                        var resultMessage = '<span class="response-font reply-block">' + result.text + '<br /> <span class="user-name">by ' + result.userName + '</span></span>';
                             $('#result1').html(resultMessage);
                         }
                     });

@@ -7,8 +7,9 @@
 
 @model IEnumerable<Forums.Models.Topic>
 
-<div class="center-block">
-    <h2>Forae Home Page</h2>
+<div class="center-block image">
+    <img src="https://source.unsplash.com/random/1150x400">
+    <h2 class="alter-image">The Forae <br /> <span class="alter-font">a forum about anything</span></h2>
 
     @if (User.Identity.IsAuthenticated)
     {

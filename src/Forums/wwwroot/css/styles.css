@@ -54,7 +54,7 @@
     text-align:center;
     color:white;
     opacity:0.65;
-     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .alter-font {
@@ -88,5 +88,8 @@
     }
     #mobile-user {
         visibility:hidden;
+    }
+    .image {
+        display:none;
     }
 }

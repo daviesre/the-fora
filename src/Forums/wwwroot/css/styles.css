@@ -41,6 +41,21 @@
     margin-left:95px;
 }
 
+.image {
+    position: relative;
+}
+
+#alter-image {
+    position: absolute;
+    top: 200px;
+    font-family: 'Josefin Slab', serif;
+    left: 0;
+    width: 100%;
+    text-align:center;
+    color:white;
+    opacity:0.65;
+}
+
 @media(max-width:767px){
     #title-block {
         margin-left:0px;

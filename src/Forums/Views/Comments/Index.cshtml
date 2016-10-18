@@ -7,37 +7,37 @@
 
 
 
-<div class="forum-block container comment-title center-block" id="mobile-comment">
+<div class="forum-block border-block center-block container" id="mobile-comment">
     <h3 class="title-move-down">@Model.post.Title</h3>
-    <h5>@Model.post.Text</h5>
-    <h5 class="user-name">by @Model.post.UserName</h5>
+    <h4>@Model.post.Text</h4>
+    <h4 class="user-name">by @Model.post.UserName</h4>
 </div>
 
 
 @foreach (var listComment in Model.Comments)
 {   
-    <li class="response-block container response-font reply-block">@Html.DisplayFor(modelComment => listComment.Text) <span class="user-name"> <br /> by @Html.DisplayFor(modelComment => listComment.UserName)</span> </li>
+    <li class="forum-block border-block change-width-block container">@Html.DisplayFor(modelComment => listComment.Text) <span class="user-name"> <br /> by @Html.DisplayFor(modelComment => listComment.UserName)</span> </li>
 }
 
-<div id="result1" class="response-block container"></div>
+<div id="result1" class="forum-block border-block container change-width-block"></div>
+
 
 @if (User.Identity.IsAuthenticated)
 {
-    <div id="add-comment-down" class="center-block response-block">
+    <div id="add-comment-down">
 
-     <p>add new comment</p>
+        <p>add new comment</p>
 
-    <form class="new-comment">
-        <input type="hidden" name="Post" value="@Model.post" />
-        <input type="hidden" name="PostId" value="@Model.post.PostId" />
-        <input type="hidden" name="newUser" value="@User.Identity.Name" />
-        <div>
+        <form class="new-comment">
+            <input type="hidden" name="Post" value="@Model.post" />
+            <input type="hidden" name="PostId" value="@Model.post.PostId" />
+            <input type="hidden" name="newUser" value="@User.Identity.Name" />
             <textarea type="text" name="newText" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
+            <br />
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
 
-    <script type="text/javascript">
+        <script type="text/javascript">
         $(document).ready(function () {
             $('.new-comment').submit(function (event) {
                 event.preventDefault();
@@ -47,13 +47,13 @@
                     dataType: 'json',
                     data: $(this).serialize(),
                     success: function (result) {
-                        var resultMessage = '<span class="response-font reply-block">' + result.text + '<br /> <span class="user-name">by ' + result.userName + '</span></span>';
+                        var resultMessage = result.text + '<br /> <span class="user-name">by ' + result.userName + '</span>';
                             $('#result1').html(resultMessage);
                         }
                     });
                 });
             });
-      </script>
+        </script>
 
     </div>
 }

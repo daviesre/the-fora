@@ -15,18 +15,18 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">Fora</a>
-                @if (User.Identity.IsAuthenticated)
-                {
-                 <p class="navbar-text navbar-right"><a href="/Account/Logout">Log Out</a></p>
-                 <p class="navbar-text navbar-right" id="mobile-user">@User.Identity.Name</p>
-                }
-                else
-                {
-                  <p class="navbar-text navbar-right"><a href="/Account/Login">Log In</a></p>
-                }
+                    <a class="navbar-brand" href="/">Fora</a>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <p class="navbar-text navbar-right"><a href="/Account/Logout">Log Out</a></p>
+                        <p class="navbar-text navbar-right" id="mobile-user">@User.Identity.Name</p>
+                    }
+                    else
+                    {
+                        <p class="navbar-text navbar-right"><a href="/Account/Login">Log In</a></p>
+                    }
+                </div>
             </div>
-        </div>
      </nav>
        <div class="container">
          @RenderBody()

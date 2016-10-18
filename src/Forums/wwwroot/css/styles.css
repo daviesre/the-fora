@@ -8,6 +8,7 @@
   font-size: 1.3em;
   line-height: 2.4;
   font-family:"Josefin Slab", serif;
+
 }
 
 .user-name {
@@ -20,11 +21,6 @@
 
 .response-block {
   border: 1px solid white;
-}
-
-.response-font {
-    border: 1px solid lightgray;
-    font-family:Calibri;
 }
 
 .btn {
@@ -66,12 +62,12 @@
     margin-bottom:25px;
 }
 
-.reply-block {
-    max-width:1000px;
+.change-width-block {
+    max-width:800px;
     line-height: 1.5;
 }
 
-.comment-title
+.border-block
 {
     border: 1px solid lightgray;
 }

@@ -1,4 +1,8 @@
-﻿.center-block {
+﻿.body  {
+    font-family: 'Amatic SC', cursive;
+}
+
+.center-block {
     text-align:center;
 }
 
@@ -9,6 +13,10 @@
   line-height: 2.4;
   font-family:"Josefin Slab", serif;
 
+}
+
+.fancy-font {
+  font-family:"Josefin Slab", serif;
 }
 
 .user-name {

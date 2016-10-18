@@ -14,19 +14,17 @@
 </div>
 
 
-@foreach (var listComment in Model.Comments)
-{   
-    <li class="forum-block border-block change-width-block container">@Html.DisplayFor(modelComment => listComment.Text) <span class="user-name"> <br /> by @Html.DisplayFor(modelComment => listComment.UserName)</span> </li>
-}
-
-<div id="result1" class="forum-block border-block container change-width-block"></div>
-
+    @foreach (var listComment in Model.Comments)
+    {
+        <li class="forum-block border-block change-width-block container">@Html.DisplayFor(modelComment => listComment.Text) <span class="user-name"> <br /> by @Html.DisplayFor(modelComment => listComment.UserName)</span> </li>
+    }
+<div class="forum-block border-block change-width-block container">
+    <div id="result1"></div>
+</div>
 
 @if (User.Identity.IsAuthenticated)
 {
-    <div id="add-comment-down">
-
-        <p>add new comment</p>
+    <div id="add-comment-down" class="center-block">
 
         <form class="new-comment">
             <input type="hidden" name="Post" value="@Model.post" />
@@ -34,7 +32,7 @@
             <input type="hidden" name="newUser" value="@User.Identity.Name" />
             <textarea type="text" name="newText" required></textarea>
             <br />
-            <button type="submit" class="btn btn-default">Submit</button>
+            <button type="submit" class="btn btn-default fancy-font">add comment</button>
         </form>
 
         <script type="text/javascript">

@@ -1,6 +1,6 @@
 # The Fora
 
-#### A forum about anything
+#### _**A forum about anything**_
 
 #### By _**Russ Davies**_
 
@@ -15,7 +15,9 @@ A forum based off Reddit with a more modern and simplistic design. Users can add
 * Run the server
 
 ## Known Bugs / Unimplemented Features
-None known at this time.
+* Heading for the site appears before the image loads.
+* Creating a topic that doesn't have an associated image creates an error.
+* An unwanted gray line appears sometimes in the comment section.
 
 ## Support and contact details
 Please contact me at russdavies392@gmail.com if you have any questions or comments.

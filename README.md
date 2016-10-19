@@ -25,7 +25,7 @@ Please contact me at russdavies392@gmail.com if you have any questions or commen
 #### Technologies Used
 * ASP.Net MVC
 * SQL
-* Unsplash APi (for images)
+* Unsplash API (for images)
 
 #### License
 Copyright (c) 2016 _**Russ Davies**_
